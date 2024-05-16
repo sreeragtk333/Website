@@ -46,6 +46,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .category {
@@ -54,10 +55,40 @@ nav ul li a {
     text-decoration: none;
     color: black;
     border: 1px solid #ccc;
+    flex: 1 1 calc(33.333% - 2rem); /* Flexible basis with margin consideration */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's width and height */
+    margin: 0.5rem; /* Spacing between category items */
 }
 
 .category:hover {
     background-color: #ddd;
+}
+
+.product-gallery {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1 1 calc(25% - 2rem); /* Flexible basis with margin consideration */
+    margin: 0.5rem; /* Spacing between product items */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
